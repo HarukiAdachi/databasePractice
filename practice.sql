@@ -4,51 +4,51 @@ Select name FROM countries;
 
 -- 問2
 -- ヨーロッパに属する国をすべて抽出してください。
-SELECT *FROM countries WHERE region LIKE '%Europe%';
+SELECT * FROM countries WHERE region LIKE '%Europe%';
 
 -- 問3
 -- ヨーロッパ以外に属する国をすべて抽出してください。
-SELECT *FROM countries WHERE region NOT LIKE '%Europe%';
+SELECT * FROM countries WHERE region NOT LIKE '%Europe%';
 
 -- 問4
 -- 人口が10万人以上の国をすべて抽出してください。
-SELECT *FROM countries WHERE population >= 100000;
+SELECT * FROM countries WHERE population >= 100000;
 
 -- 問5
 -- 平均寿命が56歳から76歳の国をすべて抽出してください。
-SELECT *FROM countries WHERE life_expectancy BETWEEN 56 AND 76;
+SELECT * from countries WHERE life_expectancy BETWEEN 56 AND 76;
 
 -- 問6
 -- 国コードがNLB,ALB,DZAのもの市区町村をすべて抽出してください。
-select *from cities where country_code='NLB' or country_code='ALB' or country_code='DZA';
+select * from cities where country_code='NLB' or country_code='ALB' or country_code='DZA';
 
 -- 問7
 -- 独立独立記念日がない国をすべて抽出してください。
-select *from countries where indep_year is NULL;
+select * from countries where indep_year is NULL;
 
 -- 問8
 -- 独立独立記念日がある国をすべて抽出してください。
-select *from countries where indep_year is NOT NULL;
+select * from countries where indep_year is NOT NULL;
 
 -- 問9
 -- 名前の末尾が「ia」で終わる国を抽出してください。
-select *from countries where name like '%ia';
+select * from countries where name like '%ia';
 
 -- 問10
 -- 名前の中に「st」が含まれる国を抽出してください。
-select *from countries where name like '%st%';
+select * from countries where name like '%st%';
 
 -- 問11
 -- 名前が「an」で始まる国を抽出してください。
-select *from countries where name like 'An%';
+select * from countries where name like 'An%';
 
 -- 問12
 -- 全国の中から独立記念日が1990年より前または人口が10万人より多い国を全て抽出してください。
-select *from countries where indep_year <= 1990 or population >= 100000;
+select * from countries where indep_year <= 1990 or population >= 100000;
 
 -- 問13
 -- コードがDZAもしくはALBかつ独立記念日が1990年より前の国を全て抽出してください。
-select *from countries where (code = 'DZA' or code = 'ALB') and indep_year <= 1990;
+select * from countries where (code = 'DZA' or code = 'ALB') and indep_year <= 1990;
 
 -- 問14
 -- 全ての地方をグループ化せずに表示してください。
@@ -61,11 +61,11 @@ select concat(name, 'の人口は', population, '人です') from countries;
 
 -- 問16
 -- 平均寿命が短い順に国名を表示させてください。ただしNULLは表示させないでください。
-select *from countries where life_expectancy is not NULL order by life_expectancy asc;
+select * from countries where life_expectancy is not NULL order by life_expectancy asc;
 
 -- 問17
 -- 平均寿命が長い順に国名を表示させてください。ただしNULLは表示させないでください。
-select *from countries where life_expectancy is not NULL order by life_expectancy desc;
+select * from countries where life_expectancy is not NULL order by life_expectancy desc;
 
 -- 問18
 -- 平均寿命が長い順、独立記念日が新しい順に国を表示させてください。
